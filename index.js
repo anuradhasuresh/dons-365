@@ -22,8 +22,8 @@ async function connect() {
 }
 connect();
 
-app.listen(3001, () => {
-    console.log("SERVER RUNS PERFECTLY ON PORT 3001!");
+app.listen(8001, () => {
+    console.log("SERVER RUNS PERFECTLY ON PORT 8001!");
     
 });
 

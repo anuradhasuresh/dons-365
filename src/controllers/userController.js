@@ -46,6 +46,10 @@ const userLogin = async(req, res, next) => {
             response.message = 'Logged In';
             response.code = 0;
             response.username = user.username;
+            response.id = user._id;
+            response.name = user.name;
+            response.email = user.email;
+            response.phoneno = user.phoneno;
             res.status(200).send(response);
         }
         else {

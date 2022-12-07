@@ -93,7 +93,9 @@ const addItem = (req, res, next) => {
         price: req.body.price,
         uploadDate: Date(),
         itemPhoto: req.body.itemPhoto,
-        status: "Available"
+        status: "Available",
+        userId: req.body.userId,
+        phoneNo: req.body.phoneNo,
     })
     item.save()
     .then(response => {
@@ -118,9 +120,10 @@ const updateItem = (req, res, next) => {
         name: req.body.name,
         description: req.body.description,
         price: req.body.price,
-        uploadDate: req.body.uploadDate,
+        uploadDate: Date(),
         itemPhoto: req.body.itemPhoto,
-        status: req.body.status
+        status: req.body.status,
+        phoneNo: req.body.phoneNo,
     }
     Item.findByIdAndUpdate(itemId, {$set: updatedData})
     .then(() => {
@@ -153,5 +156,4 @@ const deleteItem = (req, res, next) => {
 }
 
 module.exports = {
-    getItems, addItem, searchByItem, showItem, updateItem, deleteItem, searchByItem
-}
+    getItems, addItem, searchByItem, showItem, updateItem, deleteItem, searchByItem }

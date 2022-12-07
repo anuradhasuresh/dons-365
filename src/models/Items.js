@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-// const User = require('./Users')
+const User = require('./Users')
 
 const ItemSchema = new mongoose.Schema({
     name : {
@@ -23,12 +23,14 @@ const ItemSchema = new mongoose.Schema({
         required: true,
     },
 
-    itemPhoto : {
-        data: Buffer,
-        contentType: String,
-    },
-
     status : {
+        type: String,
+        required: true,
+    },
+    userId : {
+        type: String,
+    },
+    phoneNo : {
         type: String,
         required: true,
     },

@@ -30,6 +30,10 @@ const ItemSchema = new mongoose.Schema({
     userId : {
         type: String,
     },
+    phoneNo : {
+        type: String,
+        required: true,
+    },
 });
 
 // const userID = user._id;
